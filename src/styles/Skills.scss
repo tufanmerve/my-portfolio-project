@@ -1,0 +1,52 @@
+@import "./Variables.scss";
+
+.item {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+
+}
+
+.item:hover {
+    color: $white;
+}
+
+
+.skill-box {
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+
+p {
+    color: #B8B8B8;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+    text-align: center;
+    padding: 5% ;
+
+}
+
+.skills {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+}
+
+h2{
+    padding: 1rem 0 0 0;
+}
+
+.skill-slider{
+    padding:  5% 0;
+    justify-content: space-between;
+    text-align: center;
+}
+
