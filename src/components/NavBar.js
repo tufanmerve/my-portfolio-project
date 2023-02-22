@@ -50,8 +50,8 @@ const NavBar = () => {
                     </Nav>
                     <span className='navbar-text'>
                         <div className='social-icon'>
-                            <a href='#'><img src={github} alt="" /></a>
-                            <a href='#'><img src={linkedin} alt="" /></a>
+                            <a href='https://github.com/tufanmerve'><img src={github} alt="" /></a>
+                            <a href='https://www.linkedin.com/in/merve-tufan-035216252/'><img src={linkedin} alt="" /></a>
                             <button className='vvd' onClick={() => console.log("connect")}>Connect Me</button>
                         </div>
                     </span>
