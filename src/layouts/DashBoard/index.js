@@ -6,7 +6,7 @@ function DashboardLayout() {
   return (
     <div>
       <NavBar />
-      <div id='content'>
+      <div id='navbar'>
         <Outlet />
       </div>
     </div>

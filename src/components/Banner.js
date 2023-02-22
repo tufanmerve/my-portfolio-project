@@ -7,10 +7,10 @@ import header from "../assets/header.png"
 const Banner = () => {
   
   return (
-    <section className='banner' id='home'>
+    <section className='banner' id='about'>
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} lg={7}>
+          <Col xs={12} md={6} lg={7} className="content">
             <span className='tagline'>Welcome to my Portfolio</span>
             <h1>{`Hi I'm `}<span className='wrap'>Web Developer</span></h1>
             <p>Hello, I'm Merve Tufan a Front-end React Developer. This is my portfolio, I am looking for more experience in my field. </p>

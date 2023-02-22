@@ -4,6 +4,8 @@ import "../styles/Navbar.css";
 import logo from "../assets/logo.png";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
+import { navLinks } from '../constant';
+
 
 
 const NavBar = () => {
@@ -27,25 +29,24 @@ const NavBar = () => {
     }
 
     return (
+    <div className='navbar'>
         <Navbar expand="md" className={scrolled ? "scrolled" : ""} >
-            <Container className='navbar'>
+            <Container>
                 <Navbar.Brand className='brand' href="#home">
-                    <img className='brand' src={logo} alt="logo" />
+                    <img src={logo} alt="logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" >
                     <span className='navbar-toggler-icon'></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home"
-                            className={activeLink === "about" ? "active-navbar-link" : "navbar-link"}
-                            onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
-                        <Nav.Link href="#link"
-                            className={activeLink === "skills" ? "active-navbar-link" : "navbar-link"}
-                            onClick={() => onUpdateActiveLink('skills')} >Skills</Nav.Link>
-                        <Nav.Link href='project'
-                            className={activeLink === "project" ? "active-navbar-link" : "navbar-link"}
-                            onClick={() => onUpdateActiveLink('project')} >Project</Nav.Link>
+
+                        {
+                            navLinks.map((nav) =>
+                                <Nav.Link href={`#${nav.id}`}
+                                    className={activeLink === `${nav.id}` ? "active-navbar-link" : "navbar-link"}
+                                    onClick={() => onUpdateActiveLink(`${nav.id}`)}>{nav.title}</Nav.Link>)
+                        }
                     </Nav>
                     <span className='navbar-text'>
                         <div className='social-icon'>
@@ -57,6 +58,7 @@ const NavBar = () => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+        </div>
     )
 }
 

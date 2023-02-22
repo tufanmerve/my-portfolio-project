@@ -2,6 +2,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import "../styles/Skills.css";
+import { skills } from '../constant';
+
 
 export const Skills = () => {
     const responsive = {
@@ -36,19 +38,15 @@ export const Skills = () => {
                             <p>Enthusiastic and motivated self-learning in  information Technology.These are the what I learn:
                                 <h6><span>Dart,Flutter,Figma,HTMl,Css,JavaScript,React,Responsive Design</span></h6>
                             </p>
-                            <Carousel className='skill-slider' responsive={responsive} infinite={true}>
-                                <div className='item'>
-                                    <h5>Web Development</h5>
-                                </div>
-                                <div className='item'>
-                                    <h5>Flutter Development</h5>
-                                </div>
-                                <div className='item'>
-                                    <h5>UI/UX Design</h5>
-                                </div>
-                                <div className='item'>
-                                    <h5>Web Design</h5>
-                                </div>
+                            <Carousel className='skill-slider' responsive={responsive} infinite={true} autoPlay={true} removeArrowOnDeviceType={["laptop", "desktop"]}
+                                autoPlaySpeed={3000} >
+
+                                {
+                                    skills.map((skill, id) =>
+                                        <div className='item' key={id}>
+                                            <h5>{skill.title}</h5>
+                                        </div>)
+                                }
                             </Carousel>
                         </div>
                     </Col>
