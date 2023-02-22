@@ -1,6 +1,8 @@
 import weatherapp from "../assets/weatherapp.png";
 import hoobank from "../assets/hoobank.png";
 import todoapp from "../assets/todoapp.png";
+
+
 export const navLinks =[
     {
         id:'about',

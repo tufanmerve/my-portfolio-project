@@ -35,8 +35,8 @@ export const Skills = () => {
                     <Col>
                         <div className='skill-box'>
                             <h2>Skills</h2>
-                            <p>Enthusiastic and motivated self-learning in  information Technology.These are the what I learn:
-                                <h6><span>Dart,Flutter,Figma,HTMl,Css,JavaScript,React,Responsive Design</span></h6>
+                            <p>Enthusiastic and motivated self-learning in  information Technology.These are what I learn:
+                                <h6><span>Dart,Flutter,Figma,HTML,Css,JavaScript,React,Responsive Design</span></h6>
                             </p>
                             <Carousel className='skill-slider' responsive={responsive} infinite={true} autoPlay={true} removeArrowOnDeviceType={["laptop", "desktop"]}
                                 autoPlaySpeed={3000} >
