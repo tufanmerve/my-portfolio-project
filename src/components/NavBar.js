@@ -5,10 +5,13 @@ import logo from "../assets/logo.png";
 import { navLinks } from '../constant';
 import { FiGithub} from "react-icons/fi";
 import { RiLinkedinLine } from "react-icons/ri";
+import { useNavigate } from 'react-router-dom';
 
 
 
 const NavBar = () => {
+
+    const navigate = useNavigate();
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
@@ -33,7 +36,7 @@ const NavBar = () => {
             <Navbar expand="md" className={scrolled ? "scrolled" : ""} >
                 <Container>
                     <Navbar.Brand className='brand' href="#home">
-                        <img src={logo} alt="logo" />
+                        <img src={logo} alt="logo" onClick={()=> navigate("/")}/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" >
                         <span className='navbar-toggler-icon'></span>

@@ -27,6 +27,7 @@ const Project = () => {
                 }
                 
             </Row>
+            <div><hr /></div>
         </div>
     )
 }
