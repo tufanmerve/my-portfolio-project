@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import "../styles/Navbar.css";
 import logo from "../assets/logo.png";
 import { navLinks } from '../constant';
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub} from "react-icons/fi";
 import { RiLinkedinLine } from "react-icons/ri";
 
 

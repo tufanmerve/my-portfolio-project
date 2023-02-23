@@ -60,17 +60,21 @@
   border-radius: 50%;
   transform: scale(0);
   transition: 0.3s ease-in;
+  color: $white;
 }
 
 .social-icon a:hover{
   background-color: $white;
-  color: #000;
+  
 }
 
 .icon{
   width: 70%;
-  height: 70%; 
-
+  height: 70%;
+  color: $white; 
+}
+.icon:hover{
+  color: $gray;
 }
 
 // .vvd{
@@ -99,6 +103,7 @@
 
 .navbar-text button::before {
   content: "";
+  font-weight: 500;
   width: 0%;
   height: 100%;
   position: absolute;

@@ -13,7 +13,7 @@ const Project = () => {
                     project.map((proj,id)=>
                     <Col key={id}>
                     <div className='img-box'>
-                        <img className='img' src={proj.imgUrl}></img>
+                        <img className='img' alt={`${proj.title}`} src={proj.imgUrl}></img>
                         <div className="proj-text">
                             <h4>{proj.title}</h4>
                             <span>{proj.description}</span>
