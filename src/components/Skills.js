@@ -5,6 +5,7 @@ import "../styles/Skills.css";
 import { skills } from '../constant';
 
 
+
 export const Skills = () => {
     const responsive = {
         superLargeDesktop: {
@@ -38,8 +39,8 @@ export const Skills = () => {
                             <p>Enthusiastic and motivated self-learning in  information Technology.These are what I learn:
                                 <h6><span>Dart,Flutter,Figma,HTML,Css,JavaScript,React,Responsive Design</span></h6>
                             </p>
-                            <Carousel className='skill-slider' responsive={responsive} infinite={true} autoPlay={true} removeArrowOnDeviceType={["laptop", "desktop"]}
-                                autoPlaySpeed={3000} >
+                            <Carousel className='skill-slider' responsive={responsive} infinite={true} autoPlay={true}
+                             removeArrowOnDeviceType={["laptop", "desktop"]} autoPlaySpeed={3000} pauseOnHover={false} >
 
                                 {
                                     skills.map((skill, id) =>
@@ -47,6 +48,7 @@ export const Skills = () => {
                                             <h5>{skill.title}</h5>
                                         </div>)
                                 }
+                               
                             </Carousel>
                         </div>
                     </Col>

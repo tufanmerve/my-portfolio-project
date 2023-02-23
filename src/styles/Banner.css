@@ -11,7 +11,6 @@
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 0;
-  border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
@@ -38,25 +37,27 @@
 }
 
 .banner button {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin: 60px 0;
   font-weight: 500;
-  border-radius: 1rem;
+  background-color: transparent;
+  border-style: none;
+  color: #fff;
   height: 3rem;
   width: 15rem;
-  display: inline;
-  align-items: center;
-  justify-content: center;
   letter-spacing: 0.8px;
   font-size: 25px;
+  text-align: start;
 }
 
 .arrow {
-  margin-left: 3px;
+  position: relative;
+  left: 3px;
+  size: 25px;
 }
 
 .arrow:hover {
-  margin-left: 15px;
+  position: relative;
+  left: 15px;
   transition: 0.5s;
 }
 

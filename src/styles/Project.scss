@@ -1,6 +1,6 @@
 @import "./Variables.scss";
 
-.project{
+.projects{
     height: 50rem;
     background-color: $gray;
     padding: 10% 5%;
@@ -14,7 +14,7 @@ h2{
 }
 
 .title{
-    color: $gray;
+    color: $white;
 }
 
 .img{
@@ -46,6 +46,7 @@ h2{
     .proj-text{
         position: absolute;
         text-align: center;
+        padding: 10%;
         top: 65%;
         left: 50%;
         transform: translate(-50%, -50%);

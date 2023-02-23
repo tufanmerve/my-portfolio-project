@@ -1,13 +1,13 @@
 import React from 'react';
 import "../styles/Project.css";
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col,  } from 'react-bootstrap';
 import { project } from '../constant';
-import hoobank from "../assets/hoobank.png"
+
 
 const Project = () => {
     return (
-        <div className='project' id='project'>
-            <h2 >Projects</h2>
+        <div className='projects' id='projects'>
+           <div className='title'> <h2  >Projects</h2></div>
             <Row>
                 {
                     project.map((proj,id)=>
@@ -26,24 +26,6 @@ const Project = () => {
                 </Col> )
                 }
                 
-                {/* <Col>
-                    <div className='img-box'>
-                        <img className='img' src={hoobank}></img>
-                        <div className="proj-text">
-                            <h4>Hoobank</h4>
-                            <span>Lorem ipsum dolar sit amet dolar sit sit amet ipsum</span>
-                        </div>
-                    </div>
-                </Col>
-                <Col>
-                    <div className='img-box'>
-                        <img className='img' src={hoobank}></img>
-                        <div className="proj-text">
-                            <h4>Hoobank</h4>
-                            <span>Lorem ipsum dolar sit amet dolar sit sit amet ipsum</span>
-                        </div>
-                    </div>
-                </Col> */}
             </Row>
         </div>
     )

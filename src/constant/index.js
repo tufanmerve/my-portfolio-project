@@ -44,7 +44,7 @@ export const project=[
     {
         title: "Weather App",
         imgUrl: weatherapp,
-        description: " It supports searching locations by city name.Creat with Open Weather API and axios library ",
+        description: " It supports searching locations by city name. Creat with Open Weather API and axios library ",
         livePath : "https://tufanmerve-weather-app.netlify.app/",
         repoPath:"https://github.com/tufanmerve/weather-app"
     },
