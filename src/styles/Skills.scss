@@ -24,14 +24,23 @@
 
 p {
     color: #B8B8B8;
-    font-size: 14px;
+    font-size: 1.5rem;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     width: 96%;
     text-align: center;
-    padding: 5% ;
-
+    
 }
+
+h3{
+    color: #B8B8B8;
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+    text-align: center;
+}
+
 
 .skills {
     align-items: center;
@@ -41,8 +50,9 @@ p {
 }
 
 h2{
-    padding: 1rem 0 0 0;
+    padding: 3rem 0 0;
     text-align: center;
+    font-size: 2.5rem;
 }
 
 .skill-slider{

@@ -7,6 +7,7 @@ import { skills } from '../constant';
 
 
 export const Skills = () => {
+
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -19,7 +20,7 @@ export const Skills = () => {
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 2
+            items: 1
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
@@ -36,11 +37,9 @@ export const Skills = () => {
                     <Col>
                         <div className='skill-box'>
                             <h2>Skills</h2>
-                            <p>Enthusiastic and motivated self-learning in  information Technology.These are what I learn:
-                                <h6><span>Dart,Flutter,Figma,HTML,Css,JavaScript,React,Responsive Design</span></h6>
-                            </p>
-                            <Carousel className='skill-slider' responsive={responsive} infinite={true} autoPlay={true}
-                             removeArrowOnDeviceType={["laptop", "desktop"]} autoPlaySpeed={3000} pauseOnHover={false} >
+                            <p>Enthusiastic and motivated self-learning in  information Technology.</p>
+                            <Carousel className='skill-slider'  responsive={responsive} infinite={true} autoPlay={true}
+                                removeArrowOnDeviceType={["laptop", "mobile","desktop"]} autoPlaySpeed={3000} pauseOnHover={false} >
 
                                 {
                                     skills.map((skill, id) =>
@@ -48,7 +47,7 @@ export const Skills = () => {
                                             <h5>{skill.title}</h5>
                                         </div>)
                                 }
-                               
+
                             </Carousel>
                         </div>
                     </Col>

@@ -11,6 +11,8 @@
     justify-content: flex-start;
 }
 
+
+
 .banner .tagline {
     font-weight: 700;
     letter-spacing: 0.8px;
@@ -20,7 +22,7 @@
     display: inline-block;
 }
 
-.banner h1 {
+.title{
     font-size: 65px;
     font-weight: 700;
     letter-spacing: 0.8px;
@@ -28,6 +30,7 @@
     margin-bottom: 20px;
     display: block;
 }
+
 
 .banner p {
     color: #B8B8B8;
@@ -91,4 +94,7 @@
 .header-img {
     width: 50%;
     border-radius: 50%;
+    position: relative;
+    left: 30%;
+    top: 10%;
 }

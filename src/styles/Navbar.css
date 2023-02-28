@@ -4,10 +4,6 @@
   z-index: 9999;
   transition: 0.32s ease-in-out;
   padding: 0 2%;
-}
-
-.scrolled {
-  padding: 0px 5%;
   background-color: #121212;
 }
 

@@ -16,7 +16,7 @@
   display: inline-block;
 }
 
-.banner h1 {
+.title {
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -79,4 +79,7 @@
 .header-img {
   width: 50%;
   border-radius: 50%;
+  position: relative;
+  left: 30%;
+  top: 10%;
 }/*# sourceMappingURL=Banner.css.map */

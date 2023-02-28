@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import "../styles/Navbar.css";
 import logo from "../assets/logo.png";
@@ -13,27 +13,18 @@ const NavBar = () => {
 
     const navigate = useNavigate();
     const [activeLink, setActiveLink] = useState('home');
-    const [scrolled, setScrolled] = useState(false);
+   
+   
+    
 
-    useEffect(() => {
-        const onScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true)
-            } else {
-                setScrolled(false)
-            }
-        }
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener
-    }, [])
-
+  
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
     }
 
     return (
         <div className='navbar'>
-            <Navbar expand="md" className={scrolled ? "scrolled" : ""} >
+            <Navbar expand="md" >
                 <Container>
                     <Navbar.Brand className='brand' href="#home">
                         <img src={logo} alt="logo" onClick={()=> navigate("/")}/>
@@ -54,7 +45,7 @@ const NavBar = () => {
                         <span className='navbar-text'>
                             <div className='social-icon'>
                                 <a href='https://github.com/tufanmerve'><FiGithub className='icon' /></a>
-                                <a href='https://github.com/tufanmerve'><RiLinkedinLine className='icon' /></a>
+                                <a href='https://www.linkedin.com/in/merve-tufan-035216252/'><RiLinkedinLine className='icon' /></a>
                                 <button className='vvd' onClick={() => console.log("connect")}>Connect Me</button>
 
                             </div>
