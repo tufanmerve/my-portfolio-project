@@ -4,29 +4,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 200px;
+  width: 60%;
+  height: 500px;
   padding: 20rem 5%;
+}
+.contact-form .error {
+  color: red;
+  font-size: 0.8rem;
+  padding: 0 0 10px;
 }
 .contact-form input {
   width: 100%;
-  height: 30px;
-  margin: 10px 0;
+  height: 40px;
   padding: 0 10px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 .contact-form textarea {
   width: 100%;
-  height: 100px;
-  margin: 10px 0;
+  height: 200px;
   padding: 10px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 .contact-form button {
-  width: 100%;
-  height: 30px;
+  width: 40%;
+  height: 40px;
   margin: 10px 0;
   padding: 0 10px;
   border-style: none;
@@ -41,4 +46,9 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+.contact-form .success {
+  color: green;
+  font-size: 0.8rem;
+  display: inline;
 }/*# sourceMappingURL=ContactForm.css.map */

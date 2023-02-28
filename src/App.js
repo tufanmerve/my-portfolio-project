@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes, } from "react-router-dom";
-import { ContactForm } from './components/ContactForm';
+import { ContactForm } from './Form/ContactForm';
 import { LandingPage } from './pages/LandingPage';
 import Dashboard from './layouts/Dashboard/Dashboard';
 import { Skills } from './components/Skills';
