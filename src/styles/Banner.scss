@@ -3,7 +3,7 @@
 
 .banner {
     background-color: $gray;
-    padding: 10% 4% ;
+    padding: 10% 4% 12% ;
     width: 100%;
 
 }
@@ -135,7 +135,7 @@
     line-height: 1;
     margin-bottom: 20px;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     color: $white;
 }
 
