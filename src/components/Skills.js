@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import "../styles/Skills.css";
 import { skills } from '../constant';
+import { useMediaQuery } from 'react-responsive'
 
 
 
@@ -28,16 +29,18 @@ export const Skills = () => {
         }
     };
 
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' })
+
 
     return (
 
         <section className='skills' id='skills'>
-            <Container>
-                <Row>
+            
+                <Row className={isTabletOrMobile ? 'mobile-skill-box' : 'skill-box'}>
                     <Col>
-                        <div className='skill-box'>
-                            <h2>Skills</h2>
-                            <p>Enthusiastic and motivated self-learning in  information Technology.</p>
+                        <div>
+                            <h2 className={isTabletOrMobile ? 'mobile-title' : 'title'}>Skills</h2>
+                            <p className={isTabletOrMobile ? 'mobile-content' : 'content'} >Enthusiastic and motivated self-learning in  information Technology.</p>
                             <Carousel className='skill-slider'  responsive={responsive} infinite={true} autoPlay={true}
                                 removeArrowOnDeviceType={["laptop", "mobile","desktop"]} autoPlaySpeed={3000} pauseOnHover={false} >
 
@@ -52,7 +55,7 @@ export const Skills = () => {
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            
         </section>
 
     );

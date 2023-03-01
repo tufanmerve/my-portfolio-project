@@ -1,15 +1,13 @@
 .navbar {
   width: 100%;
-  top: 10px;
-  z-index: 9999;
-  transition: 0.32s ease-in-out;
-  padding: 0 2%;
+  top: 5px;
   background-color: #121212;
 }
 
 .brand img {
   background-color: #fff;
   border-radius: 50%;
+  padding: 0;
 }
 
 .brand img:hover {

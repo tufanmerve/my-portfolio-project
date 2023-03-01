@@ -24,8 +24,8 @@ const NavBar = () => {
 
     return (
         <div className='navbar'>
-            <Navbar expand="md" >
-                <Container>
+            <Navbar expand="lg" >
+                
                     <Navbar.Brand className='brand' href="#home">
                         <img src={logo} alt="logo" onClick={()=> navigate("/")}/>
                     </Navbar.Brand>
@@ -52,7 +52,7 @@ const NavBar = () => {
 
                         </span>
                     </Navbar.Collapse>
-                </Container>
+                
             </Navbar>
         </div>
     )

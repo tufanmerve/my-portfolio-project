@@ -6,22 +6,17 @@ import { useMediaQuery } from 'react-responsive'
 
 
 const Project = () => {
-    // const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-    // const isDesktopOrLaptop = useMediaQuery({
-    //     query: '(min-width: 1224px)'
-    // })
-
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1220px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' });
 
 
 
     return (
-        <div className='projects' id='projects'>
-            <div className='title'> <h2  >Projects</h2></div>
-            <Row>
+        <section className={isTabletOrMobile ? "mobile-projects" : "projects"} id='projects'>
+            <div className={isTabletOrMobile ? "mobile-title" : "title"}> <h2  >Projects</h2></div>
+            <Row >
                 {
                     project.map((proj, id) =>
-                        <Col className={isTabletOrMobile ? "mobile-col" : 'col'} key={id}>
+                        <Col xl={4} lg={6} md={12} sm={12} key={id}>
                             <div className={isTabletOrMobile ? "mobile-img-box" : 'img-box'} >
                                 <img className={isTabletOrMobile ? "mobile-img" : 'img'} alt={`${proj.title}`} src={proj.imgUrl}></img>
                                 <div className="proj-text">
@@ -32,14 +27,15 @@ const Project = () => {
                             <div className='link' >
                                 <a href={proj.livePath}> Live </a>/
                                 <a href={proj.repoPath}> Repo</a>
-                                
+
                             </div>
+
                         </Col>)
                 }
 
             </Row>
             <div><hr /></div>
-        </div>
+        </section>
     )
 }
 

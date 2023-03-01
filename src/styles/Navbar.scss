@@ -2,22 +2,15 @@
 
 .navbar {
   width: 100%;
-  top: 10px;
-  z-index: 9999;
-  transition: 0.32s ease-in-out;
-  padding: 0 2%;
+  top: 5px;
   background-color: $gray ;
-
 }
-
-
-
 
 
 .brand img {
   background-color: $white;
   border-radius: 50%;
-
+  padding: 0;
 }
 
 
@@ -60,17 +53,18 @@
   color: $white;
 }
 
-.social-icon a:hover{
+.social-icon a:hover {
   background-color: $white;
-  
+
 }
 
-.icon{
+.icon {
   width: 70%;
   height: 70%;
-  color: $white; 
+  color: $white;
 }
-.icon:hover{
+
+.icon:hover {
   color: $gray;
 }
 
