@@ -4,6 +4,7 @@ import { Skills } from "../components/Skills"
 import Project from '../components/Project';
 import Footer from '../components/Footer';
 import { useMediaQuery } from 'react-responsive'
+import ContactForm from '../ContactForm/ContactForm';
 
 
 export const LandingPage = () => {
@@ -13,6 +14,7 @@ export const LandingPage = () => {
             <div><Banner /></div>
             <div><Skills /></div>
             <div><Project /></div>
+            <div><ContactForm/></div>
             <div>{isTabletOrMobile &&<Footer/>}</div>
         </div>
         )

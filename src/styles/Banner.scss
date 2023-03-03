@@ -49,7 +49,6 @@
 }
 
 .banner button {
-    margin: 60px 0;
     font-weight: 500;
     background-color: transparent;
     border-style: none;
@@ -59,8 +58,6 @@
     letter-spacing: 0.8px;
     font-size: 25px;
     text-align: start;
-    display: flex;
-    justify-content: flex-start;
 }
 
 
@@ -170,5 +167,12 @@
     left: 10px;
     top: 5px;
     size: 25px;
+
+}
+
+.link{
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
 
 }
