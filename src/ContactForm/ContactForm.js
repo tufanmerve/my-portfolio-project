@@ -1,13 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useForm } from "react-hook-form";
 import emailjs from '@emailjs/browser';
 // import { yupResolver } from "@hookform/resolvers/yup";
 // import validationSchema from './validation';
 import "../styles/ContactForm.css";
+import { useMediaQuery } from 'react-responsive';
 
 
 
 const ContactForm = () => {
+    const [success,setSuccess] = useState(false);
+
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' })
 
     const serviceID = "service_rwrluje";
     const templateID = "template_ygtdksb";
@@ -18,7 +22,7 @@ const ContactForm = () => {
         handleSubmit,
         // errors,
         reset,
-        formState:{errors}
+        formState: { errors }
 
     } = useForm({
         // resolver: yupResolver(validationSchema),
@@ -42,43 +46,94 @@ const ContactForm = () => {
             });
 
         reset();
+        setSuccess(true);
+        
 
     };
 
 
-    
+
 
 
     return (
         <section className='contact-form' id='contact-form' >
+
             
-            <form ref={form} onSubmit={handleSubmit(sendEmail)} id="form" className='form' >
-                <label htmlFor="name" className='label'>Name</label>
-                <input type="text"
-                    id="name"
-                    name="name"
-                    {...register("name",{required:true})} />
+
+            {isTabletOrMobile ?
+            <div>
+                <h2 className='mbl-title' >Contact Me</h2>
+                <form ref={form} onSubmit={handleSubmit(sendEmail)} id="form" className='mbl-form' >
+                    <label htmlFor="name" className='label'></label>
+                    <input type="text"
+                        placeholder='Name'
+                        className='mbl-input'
+                        id="name"
+                        name="name"
+                        {...register("name", { required: true })} />
                     {errors.name && errors.name.type === "required" && <span className='error'>* Name field is required</span>}
-                    
 
 
-                <label htmlFor="email"  className='label'>Email</label>
-                <input type="email"
-                    id="email"
-                    name="email"
-                    {...register("email",{required:true })} />
+
+                    <label htmlFor="email" className='label'></label>
+                    <input type="email"
+                    className='mbl-input'
+                        placeholder='Email'
+                        id="email"
+                        name="email"
+                        {...register("email", { required: true })} />
                     {errors.email && errors.email.type === "required" && <span className='error'>* Email field is required</span>}
 
 
-                <label htmlFor="message"  className='label'>Message</label>
-                <textarea id="message"
-                    name="message"
-                    {...register('message',{required:true})} />
+                    <label htmlFor="message" className='label'></label>
+                    <textarea id="message"
+                    className='mbl-textarea'
+                        name="message"
+                        placeholder='Message'
+                        {...register('message', { required: true })} />
                     {errors.message && errors.message.type === "required" && <span className='error'>* Message field is required</span>}
-                <button type="submit">Submit</button>
+                    <button type="submit">Submit</button>
+                    {success ? <div className='success'>Thank you for your message. I will get back to you as soon as possible.</div> : null}
+                    <hr/>
 
-            </form>
-            <h1>Get In Touch</h1>
+                </form></div> :
+
+                <div className='form-div'>
+                     <h2 className='title' >Contact Me</h2>
+                <form ref={form} onSubmit={handleSubmit(sendEmail)} id="form" className='form' >
+                    <label htmlFor="name" className='label'></label>
+                    <input type="text"
+                        placeholder='Name'
+                        id="name"
+                        name="name"
+                        {...register("name", { required: true })} />
+                    {errors.name && errors.name.type === "required" && <span className='error'>* Name field is required</span>}
+
+
+
+                    <label htmlFor="email" className='label'></label>
+                    <input type="email"
+                        placeholder='Email'
+                        id="email"
+                        name="email"
+                        {...register("email", { required: true })} />
+                    {errors.email && errors.email.type === "required" && <span className='error'>* Email field is required</span>}
+
+
+                    <label htmlFor="message" className='label'></label>
+                    <textarea id="message"
+                        name="message"
+                        className='textarea'
+                        placeholder='Message'
+                        {...register('message', { required: true })} />
+                    {errors.message && errors.message.type === "required" && <span className='error'>* Message field is required</span>}
+                    <button type="submit">Submit</button>
+                    {success ? <div className='success'>Thank you for your message. I will get back to you as soon as possible.</div> : null}
+
+                </form></div>}
+
+         
+
         </section>
     )
 }

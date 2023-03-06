@@ -24,7 +24,7 @@ const Project = () => {
                                     <span>{proj.description}</span>
                                 </div>
                             </div>
-                            <div className='link' >
+                            <div className='project-link' >
                                 <a href={proj.livePath}> Live </a>/
                                 <a href={proj.repoPath}> Repo</a>
 

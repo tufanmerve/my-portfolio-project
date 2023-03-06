@@ -3,9 +3,8 @@
 
 .banner {
     background-color: $gray;
-    padding: 10% 4% 12% ;
+    padding: 10% 4% 12%;
     width: 100%;
-
 }
 
 .content {
@@ -57,7 +56,9 @@
     width: 15rem;
     letter-spacing: 0.8px;
     font-size: 25px;
-    text-align: start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 
@@ -170,9 +171,10 @@
 
 }
 
-.link{
+.link {
     text-decoration: none;
     display: flex;
     justify-content: flex-start;
+    padding-top: 20px;
 
 }
